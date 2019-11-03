@@ -13,6 +13,8 @@ class MostEmailedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.title = "Most Emailed"
+
         title = "Most Emailed"
         view.backgroundColor = .yellow
     }

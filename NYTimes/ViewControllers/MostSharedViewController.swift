@@ -13,6 +13,8 @@ class MostSharedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.title = "Most Shared"
+
         title = "Most Shared"
         view.backgroundColor = .red
     }
