@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		2CB4502D236F3D8200C930B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4502C236F3D8200C930B0 /* AppDelegate.swift */; };
 		2CB4502F236F3D8200C930B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4502E236F3D8200C930B0 /* SceneDelegate.swift */; };
-		2CB45031236F3D8200C930B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB45030236F3D8200C930B0 /* ViewController.swift */; };
 		2CB45034236F3D8200C930B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB45032236F3D8200C930B0 /* Main.storyboard */; };
 		2CB45037236F3D8200C930B0 /* NYTimes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB45035236F3D8200C930B0 /* NYTimes.xcdatamodeld */; };
 		2CB45039236F3D8300C930B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB45038236F3D8300C930B0 /* Assets.xcassets */; };
 		2CB4503C236F3D8300C930B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB4503A236F3D8300C930B0 /* LaunchScreen.storyboard */; };
+		2CB45045236F40F100C930B0 /* MostEmailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB45044236F40F100C930B0 /* MostEmailedViewController.swift */; };
+		2CB45047236F410B00C930B0 /* MostSharedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB45046236F410B00C930B0 /* MostSharedViewController.swift */; };
+		2CB45049236F411F00C930B0 /* MostViewedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB45048236F411F00C930B0 /* MostViewedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CB45029236F3D8200C930B0 /* NYTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB4502C236F3D8200C930B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CB4502E236F3D8200C930B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2CB45030236F3D8200C930B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2CB45033236F3D8200C930B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CB45036236F3D8200C930B0 /* NYTimes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NYTimes.xcdatamodel; sourceTree = "<group>"; };
 		2CB45038236F3D8300C930B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB4503B236F3D8300C930B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CB4503D236F3D8300C930B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CB45044236F40F100C930B0 /* MostEmailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostEmailedViewController.swift; sourceTree = "<group>"; };
+		2CB45046236F410B00C930B0 /* MostSharedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostSharedViewController.swift; sourceTree = "<group>"; };
+		2CB45048236F411F00C930B0 /* MostViewedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViewedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +64,7 @@
 			children = (
 				2CB4502C236F3D8200C930B0 /* AppDelegate.swift */,
 				2CB4502E236F3D8200C930B0 /* SceneDelegate.swift */,
-				2CB45030236F3D8200C930B0 /* ViewController.swift */,
+				2CB45043236F40CE00C930B0 /* ViewControllers */,
 				2CB45032236F3D8200C930B0 /* Main.storyboard */,
 				2CB45038236F3D8300C930B0 /* Assets.xcassets */,
 				2CB4503A236F3D8300C930B0 /* LaunchScreen.storyboard */,
@@ -68,6 +72,16 @@
 				2CB45035236F3D8200C930B0 /* NYTimes.xcdatamodeld */,
 			);
 			path = NYTimes;
+			sourceTree = "<group>";
+		};
+		2CB45043236F40CE00C930B0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CB45044236F40F100C930B0 /* MostEmailedViewController.swift */,
+				2CB45046236F410B00C930B0 /* MostSharedViewController.swift */,
+				2CB45048236F411F00C930B0 /* MostViewedViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB45031236F3D8200C930B0 /* ViewController.swift in Sources */,
+				2CB45047236F410B00C930B0 /* MostSharedViewController.swift in Sources */,
+				2CB45049236F411F00C930B0 /* MostViewedViewController.swift in Sources */,
 				2CB45037236F3D8200C930B0 /* NYTimes.xcdatamodeld in Sources */,
+				2CB45045236F40F100C930B0 /* MostEmailedViewController.swift in Sources */,
 				2CB4502D236F3D8200C930B0 /* AppDelegate.swift in Sources */,
 				2CB4502F236F3D8200C930B0 /* SceneDelegate.swift in Sources */,
 			);
@@ -220,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +290,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
