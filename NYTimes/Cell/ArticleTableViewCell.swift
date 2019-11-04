@@ -10,15 +10,22 @@ import UIKit
 
 class ArticleTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    public static let identifier = "ArticleTableViewCell"
+    private static let nibName   = "ArticleTableViewCell"
+
+    @IBOutlet weak var articleTitleLabel: UILabel!
+    @IBOutlet weak var articleDescriptionLabel: UILabel!
+    @IBOutlet weak var articleImageView: UIImageView!
+
+    public static func register(in tableView: UITableView) {
+        let nib = UINib.init(nibName: nibName, bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: identifier)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureWith(article: Article) {
+        articleTitleLabel.text = article.title
+        articleDescriptionLabel.text = article.desc
+        articleImageView.image = UIImage(contentsOfFile: article.image)
     }
-    
+
 }
