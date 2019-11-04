@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="1460.8695652173915" y="-613.39285714285711"/>
         </scene>
-        <!--Most View-->
+        <!--Tab Bar Controller-->
         <scene sceneID="nMP-2v-mIE">
             <objects>
-                <tabBarController id="gTo-e2-d63" customClass="MostView" sceneMemberID="viewController">
+                <tabBarController id="gTo-e2-d63" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OtK-S9-fuu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

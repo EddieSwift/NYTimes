@@ -13,8 +13,6 @@ class MostSharedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Most Shared"
-
         title = "Most Shared"
         view.backgroundColor = .red
     }

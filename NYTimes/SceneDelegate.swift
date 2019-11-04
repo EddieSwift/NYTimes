@@ -16,34 +16,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     @available(iOS 13.0, *)
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-//        guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-//        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-//        window?.windowScene = windowScene
-//
-//        let mostEmailedViewController = MostEmailedViewController()
-//        let mostViewedViewController  = MostViewedViewController()
-//        let mostSharedViewController  = MostSharedViewController()
-//        let favoriteViewController  = FavoritesViewController()
-//
-//        let mostEmailedNavigationController = UINavigationController(rootViewController: mostEmailedViewController)
-//        let mostViewedNavigationController = UINavigationController(rootViewController: mostViewedViewController)
-//        let mostSharedNavigationController = UINavigationController(rootViewController: mostSharedViewController)
-//        let favoriteNavigationController = UINavigationController(rootViewController: favoriteViewController)
-//
-//        let tabBarController = UITabBarController()
-//
-//        tabBarController.setViewControllers([mostEmailedNavigationController,
-//                                             mostViewedNavigationController,
-//                                             mostSharedNavigationController,
-//                                             favoriteNavigationController],
-//                                            animated: true)
-//
-//        tabBarController.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-//
-//        window?.rootViewController = tabBarController
-//        window?.makeKeyAndVisible()
     }
     
 }

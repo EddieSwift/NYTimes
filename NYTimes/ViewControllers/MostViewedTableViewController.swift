@@ -13,8 +13,6 @@ class MostViewedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Most Viewed"
-
         title = "Most Viewed"
         view.backgroundColor = .blue
     }

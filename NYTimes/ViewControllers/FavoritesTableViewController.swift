@@ -13,11 +13,8 @@ class FavoritesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Favorite News"
-
         title = "Favorite News"
-//        tabBarItem
-        view.backgroundColor = .blue
+        view.backgroundColor = .green
     }
 
 }

@@ -25,7 +25,7 @@ class ArticleTableViewCell: UITableViewCell {
     func configureWith(article: Article) {
         articleTitleLabel.text = article.title
         articleDescriptionLabel.text = article.desc
-        articleImageView.image = UIImage(contentsOfFile: article.image)
+        articleImageView.loadImageInCache(with: article.image)
     }
 
 }

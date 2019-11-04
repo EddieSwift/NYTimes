@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Article {
+public struct Article {
 
     let title: String
     let image: String
