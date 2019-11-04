@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import UIKit
 
 public struct Constants {
+
+    static let rowHeight: CGFloat = 120.0
     
     public struct NetworkURL {
         static let baseURL = "https://api.nytimes.com/svc/mostpopular/v2/"

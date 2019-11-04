@@ -7,10 +7,6 @@
 //
 
 import UIKit
-import Alamofire
-import SwiftyJSON
-
-let rowHeight: CGFloat = 120.0
 
 class MostEmailedTableViewController: UITableViewController {
 
@@ -110,7 +106,7 @@ extension MostEmailedTableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return rowHeight
+        return Constants.rowHeight
     }
 
 }
