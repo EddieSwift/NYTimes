@@ -7,8 +7,8 @@ target 'NYTimes' do
 
   # Pods for NYTimes
 
-pod 'Alamofire',      '~>4.8.2'
-pod 'AlamofireImage', '~> 3.5'
+pod 'Alamofire'
+pod 'AlamofireImage'
 pod 'SwiftyJSON'
 
 end

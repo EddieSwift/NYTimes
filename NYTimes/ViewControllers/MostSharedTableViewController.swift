@@ -1,5 +1,5 @@
 //
-//  MostSharedViewController.swift
+//  MostSharedTableViewController.swift
 //  NYTimes
 //
 //  Created by Eduard Galchenko on 11/3/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MostSharedViewController: UIViewController {
+class MostSharedTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

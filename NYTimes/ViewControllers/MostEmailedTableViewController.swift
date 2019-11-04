@@ -1,5 +1,5 @@
 //
-//  MostEmailedViewController.swift
+//  MostEmailedTableViewController.swift
 //  NYTimes
 //
 //  Created by Eduard Galchenko on 11/3/19.
@@ -8,7 +8,10 @@
 
 import UIKit
 
-class MostEmailedViewController: UIViewController {
+class MostEmailedTableViewController: UITableViewController {
+
+    var articles = [Article]()
+    private let apiUrl = "https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=6JkXjYKKBZFPOSAoFcEL81KcVdZB6dL3"
 
     override func viewDidLoad() {
         super.viewDidLoad()

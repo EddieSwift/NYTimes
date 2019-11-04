@@ -1,5 +1,5 @@
 //
-//  FavoritesViewController.swift
+//  MostViewedTableViewController.swift
 //  NYTimes
 //
 //  Created by Eduard Galchenko on 11/3/19.
@@ -8,15 +8,14 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
+class MostViewedTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = "Favorite News"
+        navigationItem.title = "Most Viewed"
 
-        title = "Favorite News"
-//        tabBarItem
+        title = "Most Viewed"
         view.backgroundColor = .blue
     }
 
