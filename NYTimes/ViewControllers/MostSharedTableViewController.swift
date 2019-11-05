@@ -19,7 +19,7 @@ import UIKit
         override func viewDidLoad() {
             super.viewDidLoad()
 
-            title = "Most Emailed"
+            title = "Most Shared"
 
             setupActivityIndicator()
 

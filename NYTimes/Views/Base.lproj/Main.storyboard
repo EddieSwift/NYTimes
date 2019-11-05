@@ -143,11 +143,11 @@
             </objects>
             <point key="canvasLocation" x="1460.8695652173915" y="122.54464285714285"/>
         </scene>
-        <!--Most Viewed-->
+        <!--Most Emailed-->
         <scene sceneID="NAp-hM-Ddr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BeT-vy-DFF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Most Viewed" id="LsZ-VV-kXk"/>
+                    <tabBarItem key="tabBarItem" title="Most Emailed" image="envelope.fill" catalog="system" selectedImage="envelope.fill" id="LsZ-VV-kXk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="alF-fF-38h">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -166,7 +166,7 @@
         <scene sceneID="woV-Zl-D6H">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="up2-yU-cC3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Most Shared" id="dK5-aT-Ngw"/>
+                    <tabBarItem key="tabBarItem" title="Most Shared" image="square.and.arrow.up" catalog="system" selectedImage="square.and.arrow.up" id="dK5-aT-Ngw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k7U-d4-gaW">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -220,4 +220,8 @@
             <point key="canvasLocation" x="-1404.3478260869567" y="498.88392857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="envelope.fill" catalog="system" width="64" height="46"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
 </document>

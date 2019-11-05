@@ -14,19 +14,15 @@ let imageCache = NSCache<NSString, UIImage>()
 extension UIImageView {
 
     func loadImageInCache(with urlString: String) {
-
         self.image = nil
 
         if let cachedImage = imageCache.object(forKey: urlString as NSString) {
-
             self.image = cachedImage
             return
         }
 
         Alamofire.request(urlString).responseImage { response in
-
             if let downloadedImage = response.result.value {
-
                 imageCache.setObject(downloadedImage, forKey: urlString as NSString)
                 self.image = downloadedImage
             }
