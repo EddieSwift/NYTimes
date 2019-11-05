@@ -27,7 +27,7 @@ public class NetworkService {
 
                 for result in results {
                     let article = Article(title: result["title"].stringValue, image: result["media"][0]["media-metadata"][0]["url"].stringValue, desc: result["abstract"].stringValue, url: result["url"].url!)
-                    articles.append(article)
+                        articles.append(article)
                 }
                 completion(.success(articles))
             } else {
