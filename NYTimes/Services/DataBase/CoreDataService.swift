@@ -9,17 +9,17 @@
 import CoreData
 
 final public class CoreDataService {
-
+    
     public static let shared = CoreDataService()
-
+    
     private var backgroundContext: NSManagedObjectContext!
-
+    
     init() {
         createContainer { container in
             self.backgroundContext = container.newBackgroundContext()
         }
     }
-
+    
     func fetchAllArticles() -> [SavedArticle] {
         let fetchRequest =
             NSFetchRequest<NSFetchRequestResult>(entityName: "SavedArticle")
@@ -32,7 +32,7 @@ final public class CoreDataService {
         }
         return [SavedArticle]()
     }
-
+    
     public func save(_ article: Article) {
         guard let context = backgroundContext else { return }
         guard let savedArticle = NSEntityDescription.insertNewObject(forEntityName: "SavedArticle",
@@ -48,7 +48,7 @@ final public class CoreDataService {
             print(error)
         }
     }
-
+    
     func createContainer(completion: @escaping
         (NSPersistentContainer) -> Void) { let container = NSPersistentContainer(name:
         "NYTimes")

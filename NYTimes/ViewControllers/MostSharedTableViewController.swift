@@ -8,64 +8,64 @@
 
 import UIKit
 
-    class MostSharedTableViewController: UITableViewController {
+class MostSharedTableViewController: UITableViewController {
 
-        // MARK: - Properties
+    // MARK: - Properties
 
-        let mostSharedURL = "shared/1/facebook.json?api-key=6JkXjYKKBZFPOSAoFcEL81KcVdZB6dL3"
-        var articles = [Article]()
-        var activityIndicator: UIActivityIndicatorView!
+    let mostSharedURL = "shared/1/facebook.json?api-key=6JkXjYKKBZFPOSAoFcEL81KcVdZB6dL3"
+    var articles = [Article]()
+    var activityIndicator: UIActivityIndicatorView!
 
-        override func viewDidLoad() {
-            super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-            title = "Most Shared"
+        title = "Most Shared"
 
-            setupActivityIndicator()
+        setupActivityIndicator()
 
-            ArticleTableViewCell.register(in: tableView)
+        ArticleTableViewCell.register(in: tableView)
 
-            getArticles()
-        }
+        getArticles()
+    }
 
-        // MARK: - Network Method
+    // MARK: - Network Method
 
-        private func getArticles() {
-            startAnimation()
-            NetworkService.shared.getArticles(mostSharedURL) { [weak self] state in
-                guard let `self` = self else { return }
-                switch state {
-                case .success(let articles):
-                    self.articles = articles
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
-                case .error(let error):
-                    print(error.localizedDescription)
+    private func getArticles() {
+        startAnimation()
+        NetworkService.shared.getArticles(mostSharedURL) { [weak self] state in
+            guard let `self` = self else { return }
+            switch state {
+            case .success(let articles):
+                self.articles = articles
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
-                self.stopAnimation()
+            case .error(let error):
+                print(error.localizedDescription)
             }
+            self.stopAnimation()
         }
+    }
 
-        // MARK: - SetupUI
+    // MARK: - SetupUI
 
-        private func setupActivityIndicator() {
-            activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
-            activityIndicator.color = UIColor .blue
-            view.addSubview(activityIndicator)
-            activityIndicator.center = view.center
-        }
+    private func setupActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        activityIndicator.color = UIColor .blue
+        view.addSubview(activityIndicator)
+        activityIndicator.center = view.center
+    }
 
-        // MARK: - Indicator Methods
+    // MARK: - Indicator Methods
 
-        private func startAnimation() {
-            activityIndicator.startAnimating()
-        }
+    private func startAnimation() {
+        activityIndicator.startAnimating()
+    }
 
-        private func stopAnimation() {
-            activityIndicator.stopAnimating()
-            activityIndicator.removeFromSuperview()
-        }
+    private func stopAnimation() {
+        activityIndicator.stopAnimating()
+        activityIndicator.removeFromSuperview()
+    }
 
     // MARK: - Navigation
 
@@ -81,35 +81,34 @@ import UIKit
         }
     }
 
+}
+
+extension MostSharedTableViewController {
+
+    // MARK: - UITableViewDataSource
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return articles.count
     }
 
-    extension MostSharedTableViewController {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        // MARK: - UITableViewDataSource
+        let cell = Bundle.main.loadNibNamed("ArticleTableViewCell", owner: self, options: nil)?.first as! ArticleTableViewCell
 
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return articles.count
-        }
+        let article = self.articles[indexPath.row]
+        cell.configureWith(article: article)
 
-        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-            let cell = Bundle.main.loadNibNamed("ArticleTableViewCell", owner: self, options: nil)?.first as! ArticleTableViewCell
-
-            let article = self.articles[indexPath.row]
-            cell.configureWith(article: article)
-
-            return cell
-        }
-
-        // MARK: - UITableViewDelegate
-
-        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            self.performSegue(withIdentifier: "showArticleSegue", sender: self)
-        }
-
-        override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return Constants.rowHeight
-        }
-
+        return cell
     }
 
+    // MARK: - UITableViewDelegate
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showArticleSegue", sender: self)
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return Constants.rowHeight
+    }
+
+}
