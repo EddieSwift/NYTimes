@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,6 +24,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mEc-jW-tqg" kind="show" identifier="showArticleSegue" id="9nP-A1-VKU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,6 +56,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mEc-jW-tqg" kind="show" identifier="showArticleSegue" id="48z-BF-og7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,6 +71,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nuk-Fg-nzs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1460.8695652173915" y="-613.39285714285711"/>
+        </scene>
+        <!--Show Article View Controller-->
+        <scene sceneID="ulw-qn-Q8g">
+            <objects>
+                <viewController id="mEc-jW-tqg" customClass="ShowArticleViewController" customModule="NYTimes" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eYW-qh-9bg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8Q-81-Qju">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dlF-fZ-myV">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="n8Q-81-Qju" firstAttribute="trailing" secondItem="c3N-7e-RoM" secondAttribute="trailing" id="LGR-2O-IvR"/>
+                            <constraint firstItem="n8Q-81-Qju" firstAttribute="top" secondItem="c3N-7e-RoM" secondAttribute="top" id="N1Z-JL-Awr"/>
+                            <constraint firstItem="dlF-fZ-myV" firstAttribute="centerY" secondItem="eYW-qh-9bg" secondAttribute="centerY" id="WNh-P4-mbM"/>
+                            <constraint firstItem="n8Q-81-Qju" firstAttribute="bottom" secondItem="c3N-7e-RoM" secondAttribute="bottom" id="YBZ-6y-wNL"/>
+                            <constraint firstItem="dlF-fZ-myV" firstAttribute="centerX" secondItem="eYW-qh-9bg" secondAttribute="centerX" id="agH-rv-NBS"/>
+                            <constraint firstItem="n8Q-81-Qju" firstAttribute="leading" secondItem="c3N-7e-RoM" secondAttribute="leading" id="e66-se-hnW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c3N-7e-RoM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CKv-T8-7r5">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wWX-1G-GIw">
+                            <connections>
+                                <action selector="addTapped:" destination="mEc-jW-tqg" id="2uu-0d-aKe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="dlF-fZ-myV" id="hbj-04-9d9"/>
+                        <outlet property="webView" destination="n8Q-81-Qju" id="zAU-b4-YUX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1f-dq-54P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2631.8840579710145" y="-245.08928571428569"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nMP-2v-mIE">
@@ -101,6 +156,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mEc-jW-tqg" kind="show" identifier="showArticleSegue" id="IgY-wT-wmA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -130,6 +188,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mEc-jW-tqg" kind="show" identifier="showArticleSegue" id="Fbd-6e-LS0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -224,4 +285,7 @@
         <image name="email" width="24" height="24"/>
         <image name="share" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="IgY-wT-wmA"/>
+    </inferredMetricsTieBreakers>
 </document>

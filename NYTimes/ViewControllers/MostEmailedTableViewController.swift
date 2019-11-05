@@ -50,10 +50,10 @@ class MostEmailedTableViewController: UITableViewController {
     // MARK: - SetupUI
 
     private func setupActivityIndicator() {
-        self.activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
-        self.activityIndicator.color = UIColor .blue
+        activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        activityIndicator.color = UIColor .blue
         view.addSubview(activityIndicator)
-        self.activityIndicator.center = view.center
+        activityIndicator.center = view.center
     }
 
     // MARK: - Indicator Methods
@@ -67,17 +67,19 @@ class MostEmailedTableViewController: UITableViewController {
         activityIndicator.removeFromSuperview()
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//        if segue.identifier == "sendUrlSegue" {
-//
-//            if let viewController = segue.destination as? DetailedViewController {
-//                let indexPath = self.tableView.indexPathForSelectedRow
-//                let article = self.articles[(indexPath?.row)!]
-//                viewController.url = article.url
-//            }
-//        }
-//    }
+    // MARK: - Navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showArticleSegue" {
+
+            if let showArticleViewController = segue.destination as? ShowArticleViewController {
+                let indexPath = self.tableView.indexPathForSelectedRow
+                let article = self.articles[(indexPath?.row)!]
+                showArticleViewController.article = article
+                showArticleViewController.showTitle = "Most Emailed"
+            }
+        }
+    }
 
 }
 
@@ -102,7 +104,7 @@ extension MostEmailedTableViewController {
     // MARK: - UITableViewDelegate
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.performSegue(withIdentifier: "sendUrlSegue", sender: self)
+        self.performSegue(withIdentifier: "showArticleSegue", sender: self)
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -9,7 +9,6 @@
 import Foundation
 
 public struct Article {
-
     let title: String
     let image: String
     let desc: String
