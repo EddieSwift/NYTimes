@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C16E20E2371B89E008DD102 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C16E20D2371B89E008DD102 /* WebKit.framework */; };
 		2C19D6B5237181BC005BBD6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19D6B4237181BC005BBD6D /* SceneDelegate.swift */; };
 		2C19D6B723718555005BBD6D /* ShowArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19D6B623718555005BBD6D /* ShowArticleViewController.swift */; };
 		2C49B9D823719C1500D1DABC /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C49B9D723719C1400D1DABC /* Article.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		0C375C48C67DB294981BE739 /* Pods-NYTimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimes.debug.xcconfig"; path = "Target Support Files/Pods-NYTimes/Pods-NYTimes.debug.xcconfig"; sourceTree = "<group>"; };
+		2C16E20D2371B89E008DD102 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		2C19D6B32371818B005BBD6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		2C19D6B4237181BC005BBD6D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2C19D6B623718555005BBD6D /* ShowArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowArticleViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C16E20E2371B89E008DD102 /* WebKit.framework in Frameworks */,
 				867CE44847065BE778AF8D5B /* Pods_NYTimes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +76,7 @@
 		0853C36CB271160F1B539008 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C16E20D2371B89E008DD102 /* WebKit.framework */,
 				AD488043305C3E2A9E113012 /* Pods_NYTimes.framework */,
 			);
 			name = Frameworks;
