@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C19D6B5237181BC005BBD6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C19D6B4237181BC005BBD6D /* SceneDelegate.swift */; };
 		2CB4502D236F3D8200C930B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4502C236F3D8200C930B0 /* AppDelegate.swift */; };
-		2CB4502F236F3D8200C930B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4502E236F3D8200C930B0 /* SceneDelegate.swift */; };
 		2CB45034236F3D8200C930B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB45032236F3D8200C930B0 /* Main.storyboard */; };
 		2CB45037236F3D8200C930B0 /* NYTimes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB45035236F3D8200C930B0 /* NYTimes.xcdatamodeld */; };
 		2CB45039236F3D8300C930B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB45038236F3D8300C930B0 /* Assets.xcassets */; };
@@ -30,14 +30,14 @@
 
 /* Begin PBXFileReference section */
 		0C375C48C67DB294981BE739 /* Pods-NYTimes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYTimes.debug.xcconfig"; path = "Target Support Files/Pods-NYTimes/Pods-NYTimes.debug.xcconfig"; sourceTree = "<group>"; };
+		2C19D6B32371818B005BBD6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		2C19D6B4237181BC005BBD6D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2CB45029236F3D8200C930B0 /* NYTimes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYTimes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB4502C236F3D8200C930B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2CB4502E236F3D8200C930B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2CB45033236F3D8200C930B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CB45036236F3D8200C930B0 /* NYTimes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NYTimes.xcdatamodel; sourceTree = "<group>"; };
 		2CB45038236F3D8300C930B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CB4503B236F3D8300C930B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2CB4503D236F3D8300C930B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ../../Info.plist; sourceTree = "<group>"; };
 		2CB45044236F40F100C930B0 /* MostEmailedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostEmailedTableViewController.swift; sourceTree = "<group>"; };
 		2CB45046236F410B00C930B0 /* MostSharedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostSharedTableViewController.swift; sourceTree = "<group>"; };
 		2CB45048236F411F00C930B0 /* MostViewedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViewedTableViewController.swift; sourceTree = "<group>"; };
@@ -198,10 +198,10 @@
 		2CB7A21A23704021000313BF /* Environment */ = {
 			isa = PBXGroup;
 			children = (
-				2CB4503D236F3D8300C930B0 /* Info.plist */,
 				2CB4502C236F3D8200C930B0 /* AppDelegate.swift */,
-				2CB4502E236F3D8200C930B0 /* SceneDelegate.swift */,
+				2C19D6B4237181BC005BBD6D /* SceneDelegate.swift */,
 				2CB45038236F3D8300C930B0 /* Assets.xcassets */,
+				2C19D6B32371818B005BBD6D /* Info.plist */,
 				2CB4503A236F3D8300C930B0 /* LaunchScreen.storyboard */,
 			);
 			path = Environment;
@@ -324,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CB7A223237043B5000313BF /* ArticleTableViewCell.swift in Sources */,
+				2C19D6B5237181BC005BBD6D /* SceneDelegate.swift in Sources */,
 				2CB45047236F410B00C930B0 /* MostSharedTableViewController.swift in Sources */,
 				2CB45049236F411F00C930B0 /* MostViewedTableViewController.swift in Sources */,
 				2CB4504B236F475200C930B0 /* FavoritesTableViewController.swift in Sources */,
@@ -336,7 +337,6 @@
 				2CB7A212237026CD000313BF /* UIImageView+LoadImageInCache.swift in Sources */,
 				2CB7A21823703EED000313BF /* Constants.swift in Sources */,
 				2CB7A215237033FE000313BF /* NetworkService.swift in Sources */,
-				2CB4502F236F3D8200C930B0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
