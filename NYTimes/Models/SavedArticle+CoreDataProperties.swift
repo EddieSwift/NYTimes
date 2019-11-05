@@ -19,4 +19,9 @@ extension SavedArticle {
     @NSManaged public var image: String?
     @NSManaged public var url: String?
     @NSManaged public var identifier: String?
+
+    func toArticle() -> Article {
+        return Article(title: title, image: image, desc: desc, url: URL(string: url))
+    }
+
 }

@@ -15,6 +15,7 @@ class ShowArticleViewController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    let coreDataService = CoreDataService.shared
     var showTitle: String!
     var article: Article!
 
@@ -52,7 +53,7 @@ class ShowArticleViewController: UIViewController, WKNavigationDelegate {
     // MARK: - Actions
 
     @IBAction func addTapped(_ sender: UIBarButtonItem) {
-
+        coreDataService.save(article)
     }
 
 }

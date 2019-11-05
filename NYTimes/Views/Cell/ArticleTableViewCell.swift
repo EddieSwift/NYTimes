@@ -28,4 +28,10 @@ class ArticleTableViewCell: UITableViewCell {
         articleImageView.loadImageInCache(with: article.image)
     }
 
+    func configureWithSaved(article: SavedArticle) {
+        articleTitleLabel.text = article.title
+        articleDescriptionLabel.text = article.desc
+        articleImageView.loadImageInCache(with: article.image!)
+    }
+
 }
