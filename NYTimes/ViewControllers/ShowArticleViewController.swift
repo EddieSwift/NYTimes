@@ -64,7 +64,7 @@ class ShowArticleViewController: UIViewController, WKNavigationDelegate {
         savedArticleAlert()
     }
     
-    // MARK: - Alert metod
+    // MARK: - Alert method
     
     private func savedArticleAlert() {
         let alert = UIAlertController(title: "Success",
